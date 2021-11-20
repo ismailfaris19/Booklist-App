@@ -14,7 +14,7 @@ let books = [{
     "title": "Everything you need to know about Git",
     "author": "Scott Chacon and Ben Straub",
     "publish_date": "2014-11-18",
-    "publisher": "Apress; 2nd edition",
+    "publisher": "Apress",
     "numOfPages": 458,
 },
 {

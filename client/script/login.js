@@ -20,10 +20,21 @@ function confirmLogin(){
 	let password = document.getElementById('password').value.trim();
 	let check = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 	const users = JSON.parse(xhttp.responseText);
+
+	let validUser = users.find(user => {
+		if(email === user.email || password === user.password){
+			return true;
+		} else {
+			return false;
+		}
+	});
+
     if (email === '' && password === '') {
 		alert('Please fill the fields...');
 	} else if(!check.test(email)){
 		alert('Please enter valid email...');
+	} else if(!validUser){
+		alert('Please enter a valid credentials...');
 	} else {
 		for (let user of users) {
 			// console.log(user);

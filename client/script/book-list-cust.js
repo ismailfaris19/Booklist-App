@@ -9,7 +9,22 @@ const searchBook = () => {
 
     const books = JSON.parse(xhttp.responseText);
 
+    let checkBook = books.find(book => {
+        let bookTitle = book.title.toLowerCase();
+        let bookAuthor = book.author.toLowerCase();
+        let bookPublisher = book.publisher.toLowerCase();
+        if(getName === book.isbn || getName === bookTitle || getName === bookAuthor || getName === bookPublisher || getName === book.title || getName === book.author || getName === book.publisher) {
+            return true;
+        } else {
+            return false;
+        }
+    });
+
     for (let book of books) {
+        let bookTitle = book.title.toLowerCase();
+        let bookAuthor = book.author.toLowerCase();
+        let bookPublisher = book.publisher.toLowerCase();
+
         if(getName === ''){
             const template = `
             <div class="col-4">
@@ -30,7 +45,7 @@ const searchBook = () => {
         `
         document.getElementById('books').innerHTML += template;
 
-        } else if(getName === book.title || getName === book.isbn || getName === book.author || getName === book.publisher) {
+        } else if(getName === book.isbn || getName === bookTitle || getName === bookAuthor || getName === bookPublisher || getName === book.title || getName === book.author || getName === book.publisher) {
             const template = `
             <div class="col-4">
                 <div class="card">
@@ -49,6 +64,14 @@ const searchBook = () => {
             </div>
         `
         document.getElementById('books').innerHTML += template;
+        
+        } else if(!checkBook) {
+            const template = `
+            <div class="col-12">
+                <h2>Book not found...</h2>
+            </div>
+            `
+            document.getElementById('books').innerHTML = template;
         }
     }
 }

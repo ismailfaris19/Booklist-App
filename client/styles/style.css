@@ -88,6 +88,7 @@ form .btn:hover{
 }
 
 .card .btn{
+    margin-right: 5px;
     text-transform: uppercase;
     background-color: #333;
     color: #fff;
@@ -108,10 +109,22 @@ form .btn:hover{
 
 .col-12{
     text-align: center;
-    margin: 15px 10px 0px 10px; 
-    padding: 50px 0px; 
-    background-color: #ffa69e; 
-    color: #40191c; 
     font-weight: bold;
-    font-size: 25px;
+}
+
+.col-md-12{
+    text-align: center;
+}
+
+.col-md-12 .btn{
+    text-transform: uppercase;
+    background-color: #333;
+    color: #fff;
+    border: 3px solid #333;
+    font-weight: bold;
+}
+
+.col-md-12 .btn:hover{
+    background-color: #fff;
+    color: #333;
 }

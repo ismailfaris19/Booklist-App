@@ -1,4 +1,4 @@
-# CRUD OPERATION IN BOOK APP
+# CRUD OPERATION IN BOOKLIST APP
 Crud Operation in Book App using HTML, CSS, JavaScript, NodeJS and ExpressJS.
 
 ### PROJECT INSTRUCTIONS:

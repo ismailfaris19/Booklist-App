@@ -34,3 +34,5 @@ Crud Operation in Book App using HTML, CSS, JavaScript, NodeJS and ExpressJS.
 * In book-list page, this page is only for admin. Admin can search a books with ISBN, Book Title, Author Name and Publishers. If you search by without enter anything, It will shows all the books or if you search by invalid input, it will shows book not found error. Admin can delete and edit the books.
 
 * In add-book page, this page also only for admin. Admin can add the new books from here but he can't add the book twice. If he tries to add same book multiple times, It will shows a error.
+
+* In Server side, I have separated into three folders which is Controller, Router and LocalDB for new user's better understanding.
